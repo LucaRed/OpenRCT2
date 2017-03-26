@@ -17,6 +17,7 @@
 #include "audio/audio.h"
 #include "cheats.h"
 #include "config/Config.h"
+#include "Context.h"
 #include "editor.h"
 #include "game.h"
 #include "input.h"
@@ -137,7 +138,7 @@ void game_create_windows()
 	window_main_open();
 	window_top_toolbar_open();
 	window_game_bottom_toolbar_open();
-	window_resize_gui(gScreenWidth, gScreenHeight);
+	window_resize_gui(context_get_width(), context_get_height());
 }
 
 enum {
